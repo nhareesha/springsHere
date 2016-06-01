@@ -38,7 +38,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/admin/home",method=RequestMethod.GET)
 	public String adminPage(Model model, Locale locale){
-		System.out.println("In admin Home");
+		System.out.println("In admin Home..");
 		model.addAttribute("admin", "Hello Admin Welcome!");
 		return "adminHome";
 	}
