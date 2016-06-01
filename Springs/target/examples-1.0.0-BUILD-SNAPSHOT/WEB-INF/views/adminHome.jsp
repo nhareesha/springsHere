@@ -6,6 +6,6 @@
 <title>AdminHome</title>
 </head>
 <body>
-<h1>${admin}</h1>
+<h1>Hello Admin ${admin}!!</h1>
 </body>
 </html>

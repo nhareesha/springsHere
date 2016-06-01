@@ -1,5 +1,6 @@
 package org.springs.examples;
 
+import java.security.Principal;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -37,9 +38,10 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/admin/home",method=RequestMethod.GET)
-	public String adminPage(Model model, Locale locale){
-		System.out.println("In admin Home..");
-		model.addAttribute("admin", "Hello Admin Welcome!");
+	public String adminPage(Model model, Locale locale,Principal principal){
+		System.out.println("In admin Home.."+principal.getName());
+		String name = principal.getName();
+		model.addAttribute("admin", name);
 		return "adminHome";
 	}
 	

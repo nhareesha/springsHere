@@ -6,15 +6,16 @@
     http://www.springframework.org/schema/security/spring-security-3.1.xsd">
     
     
-    
+    <!-- What you want to secure ..Security Context -->
     <http auto-config="true">
     	<intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
     </http>
     
+    <!-- How you want to secure ..talks about user detail services -->
     <authentication-manager>
     	<authentication-provider>
     		<user-service>
-    			<user name="admin" password="admin" authorities="ROLE_ADMIN"/>
+    			<user name="Hareesha" password="admin" authorities="ROLE_ADMIN"/>
     		</user-service>
     	</authentication-provider>
     </authentication-manager>
