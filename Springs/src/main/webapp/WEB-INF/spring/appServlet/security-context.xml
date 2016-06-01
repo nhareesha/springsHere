@@ -9,6 +9,8 @@
     <!-- What you want to secure ..Security Context -->
     <http auto-config="true">
     	<intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
+    	<!-- <http-basic/>  this provides basic windows based authentication experience-->
+    	<form-login/><!-- if we dont specify any thing this is deafult --> 
     </http>
     
     <!-- How you want to secure ..talks about user detail services -->
